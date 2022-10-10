@@ -2,9 +2,9 @@ package com.jimbob.app;
 
 public class Player {
 
-	String name;
-	int numHits;
-	int numErrors;
+	private String name;
+	private int numHits;
+	private int numErrors;
 	
 	Player(String name, int numHits, int numErrors){
 		this.setName(name);
@@ -27,13 +27,13 @@ public class Player {
 	public void setNumHits(int numHits) {
 		this.numHits = numHits;
 		if(numHits < 0){
-			throw new IllegalArgumentException("Number must be positive");
+			throw new IllegalArgumentException("Must be a number > 0");
 		}
 	}
 	public void setNumErros(int numErrors) {
 		this.numErrors = numErrors;
 		if(numErrors < 0){
-			throw new IllegalArgumentException("Number must be positive");
+			throw new IllegalArgumentException("Must be a number > 0");
 		}
 	}
 
